@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>જીતપુરા ગામ | ઘોઘંબા | પંચમહાલ</title>
+
+  <meta name="description"
+        content="જીતપુરા ગામ, તાલુકો ઘોઘંબા, જિલ્લો પંચમહાલ - ગામની માહિતી, ગ્રામ પંચાયત, સુવિધાઓ, શિક્ષણ, સમાચાર અને સંપર્ક.">
+
+  <meta name="keywords"
+        content="જીતપુરા, Jitpura, Ghoghamba, Panchmahal, ગુજરાત, ગામ">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        "Noto Sans Gujarati",
+        "Nirmala UI",
+        Arial,
+        sans-serif;
+      background: #f6f8fb;
+      color: #222;
+      line-height: 1.8;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    }
+
+    .topbar {
+      background: #166534;
+      color: white;
+      padding: 7px 5%;
+      text-align: right;
+      font-size: 14px;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: #166534;
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: #d97706;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      gap: 22px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: #166534;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+
+      background:
+        linear-gradient(
+          rgba(0, 70, 35, 0.72),
+          rgba(0, 30, 20, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=80");
+
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 82px);
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 4vw, 38px);
+      color: #fbbf24;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      margin-bottom: 28px;
+    }
+
+    .location {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 10px 22px;
+      border-radius: 50px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #f59e0b;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      margin: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d97706;
+      transform: translateY(-2px);
+    }
+
+    .btn-green {
+      background: #166534;
+    }
+
+    .btn-green:hover {
+      background: #14532d;
+    }
+
+    /* SECTION */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 75px 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+      color: #166534;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    }
+
+    .about-box h3 {
+      color: #166534;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    /* INFO CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 5px 22px rgba(0,0,0,0.07);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #166534;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* PANCHAYAT */
+    .panchayat {
+      background: #eef8f0;
+      max-width: none;
+    }
+
+    .panchayat-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .panchayat-box {
+      background: white;
+      border-left: 5px solid #166534;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .panchayat-box h3 {
+      color: #166534;
+    }
+
+    /* NEWS */
+    .news {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    }
+
+    .date {
+      display: inline-block;
+      background: #fff7ed;
+      color: #c2410c;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .news-card h3 {
+      color: #166534;
+      margin-bottom: 8px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      height: 220px;
+      background:
+        linear-gradient(135deg, #dcfce7, #fef3c7);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #166534;
+      font-size: 20px;
+      font-weight: 700;
+      border: 2px dashed #86a889;
+    }
+
+    /* MAP */
+    .map-box {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: #166534;
+      color: white;
+      max-width: none;
+    }
+
+    .contact-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 75px 5%;
+    }
+
+    .contact .section-title h2 {
+      color: white;
+    }
+
+    .contact .section-title p {
+      color: #d1fae5;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      color: #fbbf24;
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f3d20;
+      color: #d1d5db;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .news {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .topbar {
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+      }
+
+      .menu a {
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item {
+        height: 200px;
+      }
+
+      .section-title h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+  <div class="topbar">
+    📍 જીતપુરા | ઘોઘંબા | પંચમહાલ | ગુજરાત
+  </div>
+
+  <nav>
+    <a href="#home" class="logo">
+      જીત<span>પુરા</span> ગામ
+    </a>
+
+    <ul class="menu">
+      <li><a href="#home">મુખ્ય પૃષ્ઠ</a></li>
+      <li><a href="#about">ગામ વિશે</a></li>
+      <li><a href="#panchayat">ગ્રામ પંચાયત</a></li>
+      <li><a href="#facilities">સુવિધાઓ</a></li>
+      <li><a href="#news">સમાચાર</a></li>
+      <li><a href="#gallery">ગેલેરી</a></li>
+      <li><a href="#contact">સંપર્ક</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+
+<!-- HOME -->
+<section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <div class="location">
+      📍 ઘોઘંબા તાલુકો • પંચમહાલ જિલ્લો • ગુજરાત
+    </div>
+
+    <h1>જીતપુરા</h1>
+
+    <h2>આપણું ગામ, આપણી ઓળખ</h2>
+
+    <p>
+      આપણા ગામની માહિતી, વિકાસ, સુવિધાઓ અને સમાચાર માટે
+      જીતપુરા ગામની સત્તાવાર માહિતી વેબસાઇટ.
+    </p>
+
+    <a href="#about" class="btn">
+      ગામ વિશે જાણો
+    </a>
+
+    <a href="#contact" class="btn btn-green">
+      સંપર્ક કરો
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+  <div class="section-title">
+    <h2>🌱 જીતપુરા ગામ વિશે</h2>
+    <p>આપણું ગામ • આપણો વારસો • આપણું ભવિષ્ય</p>
+  </div>
+
+  <div class="about">
+
+    <div class="about-box">
+
+      <h3>જીતપુરા – આપણું ગામ</h3>
+
+      <p>
+        જીતપુરા ગામ ગુજરાતના પંચમહાલ જિલ્લાના
+        ઘોઘંબા તાલુકામાં આવેલું સુંદર ગામ છે.
+      </p>
+
+      <p>
+        આ વેબસાઇટનો મુખ્ય હેતુ ગામના લોકો માટે
+        ગામ સંબંધિત જરૂરી માહિતી એક જ જગ્યાએ ઉપલબ્ધ
+        કરાવવાનો છે.
+      </p>
+
+      <p>
+        અહીં ગામની સુવિધાઓ, શિક્ષણ, ગ્રામ પંચાયત,
+        સમાચાર, વિકાસના કામો અને મહત્વપૂર્ણ સંપર્ક
+        માહિતી ઉપલબ્ધ કરાવવામાં આવશે.
+      </p>
+
+    </div>
+
+    <div class="about-box">
+
+      <h3>📌 ગામની ઓળખ</h3>
+
+      <p><strong>ગામ:</strong> જીતપુરા</p>
+
+      <p><strong>તાલુકો:</strong> ઘોઘંબા</p>
+
+      <p><strong>જિલ્લો:</strong> પંચમહાલ</p>
+
+      <p><strong>રાજ્ય:</strong> ગુજરાત</p>
+
+      <p><strong>દેશ:</strong> ભારત 🇮🇳</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FACILITIES -->
+<section id="facilities">
+
+  <div class="section-title">
+    <h2>🏡 ગામની સુવિધાઓ</h2>
+    <p>ગામમાં ઉપલબ્ધ મહત્વપૂર્ણ સુવિધાઓ</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🏫</div>
+      <h3>શિક્ષણ</h3>
+      <p>શાળા, આંગણવાડી અને શિક્ષણ સંબંધિત માહિતી</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏥</div>
+      <h3>આરોગ્ય</h3>
+      <p>આરોગ્ય કેન્દ્ર અને નજીકની આરોગ્ય સેવાઓ</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💧</div>
+      <h3>પાણી</h3>
+      <p>ગામની પાણી પુરવઠા સંબંધિત માહિતી</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>વીજળી</h3>
+      <p>વીજળી અને સંબંધિત સેવાઓ</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛣️</div>
+      <h3>રસ્તા</h3>
+      <p>ગામના રસ્તા અને પરિવહન સંબંધિત માહિતી</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>મોબાઇલ નેટવર્ક</h3>
+      <p>મોબાઇલ અને ઇન્ટરનેટ સેવાઓની માહિતી</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏦</div>
+      <h3>બેંકિંગ</h3>
+      <p>બેંક, ATM અને નાણાકીય સેવાઓ</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🥛</div>
+      <h3>દૂધ મંડળી</h3>
+      <p>દૂધ ઉત્પાદન અને સહકારી સેવાઓ</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PANCHAYAT -->
+<section id="panchayat" class="panchayat">
+
+  <div class="panchayat-inner">
+
+    <div class="section-title">
+      <h2>🏛️ ગ્રામ પંચાયત</h2>
+      <p>જીતપુરા ગ્રામ પંચાયત</p>
+    </div>
+
+    <div class="panchayat-box">
+      <h3>સરપંચ</h3>
+      <p>નામ અને સંપર્ક માહિતી અહીં ઉમેરવામાં આવશે.</p>
+    </div>
+
+    <div class="panchayat-box">
+      <h3>ઉપસરપંચ</h3>
+      <p>નામ અને સંપર્ક માહિતી અહીં ઉમેરવામાં આવશે.</p>
+    </div>
+
+    <div class="panchayat-box">
+      <h3>ગ્રામ પંચાયત સંપર્ક</h3>
+      <p>
+        ગ્રામ પંચાયતની ઓફિસ, સમય અને ફોન નંબરની
+        માહિતી અહીં ઉમેરવામાં આવશે.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NEWS -->
+<section id="news">
+
+  <div class="section-title">
+    <h2>📢 ગામના સમાચાર અને જાહેરાતો</h2>
+    <p>જીતપુરા ગામની નવી માહિતી</p>
+  </div>
+
+  <div class="news">
+
+    <div class="news-card">
+      <span class="date">નવી જાહેરાત</span>
+
+      <h3>ગામની મહત્વપૂર્ણ જાહેરાત</h3>
+
+      <p>
+        અહીં ગ્રામ પંચાયત અથવા ગામની મહત્વપૂર્ણ
+        જાહેરાત લખી શકાશે.
+      </p>
+    </div>
+
+    <div class="news-card">
+      <span class="date">વિકાસ કાર્ય</span>
+
+      <h3>ગામના વિકાસના કામો</h3>
+
+      <p>
+        રસ્તા, પાણી, સ્ટ્રીટ લાઇટ અથવા અન્ય વિકાસ
+        કામોની માહિતી અહીં મૂકી શકાશે.
+      </p>
+    </div>
+
+    <div class="news-card">
+      <span class="date">કાર્યક્રમ</span>
+
+      <h3>ગામનો આગામી કાર્યક્રમ</h3>
+
+      <p>
+        ધાર્મિક, સામાજિક અથવા સરકારી કાર્યક્રમની
+        માહિતી અહીં મૂકી શકાશે.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+
+  <div class="section-title">
+    <h2>📸 ગામની ફોટો ગેલેરી</h2>
+    <p>જીતપુરા ગામની યાદગાર ક્ષણો</p>
+  </div>
+
+  <div class="gallery">
+
+    <div class="gallery-item">
+      🏡 ગામનો ફોટો
+    </div>
+
+    <div class="gallery-item">
+      🛕 ધાર્મિક સ્થળ
+    </div>
+
+    <div class="gallery-item">
+      🌳 ગામનું કુદરતી સૌંદર્ય
+    </div>
+
+    <div class="gallery-item">
+      🏫 શાળા
+    </div>
+
+    <div class="gallery-item">
+      🏛️ ગ્રામ પંચાયત
+    </div>
+
+    <div class="gallery-item">
+      🎉 ગામનો કાર્યક્રમ
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MAP -->
+<section>
+
+  <div class="section-title">
+    <h2>📍 જીતપુરા ગામનું સ્થાન</h2>
+    <p>Google Maps પર ગામનું સ્થાન</p>
+  </div>
+
+  <div class="map-box">
+
+    <iframe
+      src="https://www.google.com/maps?q=Jitpura,Ghoghamba,Panchmahal,Gujarat&output=embed"
+      loading="lazy">
+    </iframe>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+  <div class="contact-inner">
+
+    <div class="section-title">
+      <h2>📞 સંપર્ક</h2>
+      <p>જીતપુરા ગામ સાથે જોડાવા માટે</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h3>📍 સરનામું</h3>
+
+        <p>
+          જીતપુરા ગામ<br>
+          તાલુકો – ઘોઘંબા<br>
+          જિલ્લો – પંચમહાલ<br>
+          ગુજરાત, ભારત
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h3>🏛️ ગ્રામ પંચાયત</h3>
+
+        <p>
+          પંચાયતનો ફોન નંબર
+          અને અન્ય માહિતી અહીં ઉમેરાશે.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <h3>📱 મહત્વપૂર્ણ સંપર્ક</h3>
+
+        <p>
+          જરૂરી ફોન નંબર અને
+          ઇમર્જન્સી સંપર્ક અહીં ઉમેરાશે.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    © 2026 <strong>જીતપુરા ગામ</strong> |
+    ઘોઘંબા, પંચમહાલ, ગુજરાત
+  </p>
+
+  <p>
+    આપણું ગામ • આપણી ઓળખ • આપણો વિકાસ
+  </p>
+
+</footer>
+
+
+</body>
+</html>
